@@ -64,7 +64,6 @@ public class Bar {
      g2.drawString("Two Heads: ", 80, 900);
      g2.drawString("A head and a Tail: ", 450, 900);
      g2.drawString("Two Tails: ", 850, 900);
-   
+
    }
 }
-

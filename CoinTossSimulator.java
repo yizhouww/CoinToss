@@ -1,13 +1,33 @@
+// Name:
+// USC NetID:
+// CS 455 PA1
+// Fall 2017
+
+/**
+ * class CoinTossSimulator
+ *
+ * Simulates trials of tossing two coins and allows the user to access the
+ * cumulative results.
+ *
+ * NOTE: we have provided the public interface for this class.  Do not change
+ * the public interface.  You can add private instance variables, constants,
+ * and private methods to the class.  You will also be completing the
+ * implementation of the methods given.
+ *
+ * Invariant: getNumTrials() = getTwoHeads() + getTwoTails() + getHeadTails()
+ *
+ */
+import java.util.Scanner;
 import java.util.Random;
 public class CoinTossSimulator {
-   private Random random = new Random();
-   private int side = random.nextInt(2);
-   private int tweTails = 0;
-   private int tweheads = 0;
-   private int headtail = 0;
-   private int numTrials = 0;
-   private int head = 0;
-   private int tail = 0;
+   public Random random = new Random();
+   public int side = random.nextInt(2);
+   public int tweTails = 0;
+   public int tweheads = 0;
+   public int headtail = 0;
+   public int numTrials = 0;
+   public int head = 0;
+   public int tail = 0;
 
    /**
       Creates a coin toss simulator with no trials done yet.
@@ -85,6 +105,15 @@ public class CoinTossSimulator {
     */
    public void reset() {
        tweTails = 0; tweheads = 0; headtail = 0;
+   }
+
+   public boolean check(){
+     if(numTrials == tweheads + tweTails + headtail){
+       return true;
+     }
+     else{
+       return false;
+     }
    }
 
 }
